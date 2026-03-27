@@ -125,13 +125,13 @@ namespace SimSays {
     //% block="the next color is required"
     //% block.loc.nl="de volgende kleur nodig is"
     export function isSeriesEnd(): boolean {
-        return SimonSays.isSeriesEnd()
+        return (ISGAMING && SimonSays.isSeriesEnd())
     }
 
     //% block="still continuing the series"
     //% block.loc.nl="nog met de serie bezig"
     export function isInSeries(): boolean {
-        return (SimonSays.isSeriesBusy())
+        return (ISGAMING && SimonSays.isSeriesBusy())
     }
 
     //% block="the next color is required"

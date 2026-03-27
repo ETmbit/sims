@@ -86,6 +86,21 @@ namespace SimSays {
         SimonSays.setFirstColor()
     }
 
+    //% block="check all colors"
+    //% block.loc.nl="check alle kleuren"
+    export function checkAllColors() {
+        SimSays.checkFirstColor()
+        while (SimSays.isInSeries()) {
+            SimonSays.waitForButton()
+            if (SimonSays.isMatchingColor()) {
+                SimonSays.increasePoints()
+                SimonSays.setNextColor()
+            }
+            else
+                SimSays.stopGame()
+        }
+    }
+
     //% block="show the next color"
     //% block.loc.nl="toon de volgende kleur"
     export function showNextColor() {

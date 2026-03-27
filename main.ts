@@ -16,7 +16,7 @@ Dependencies:
 ETmbit/general, ETmbit/simonsays
 */
 
-//% color="#C4C80E" icon="\uf111"
+//% color="#66AA22" icon="\uf111"
 //% block="Simon Says"
 //% block.loc.nl="Simon Says"
 namespace SimSays {
@@ -70,14 +70,14 @@ namespace SimSays {
         return SimonSays.getCurrentColor()
     }
 
-    //% block="check the next color"
-    //% block.loc.nl="check de volgende kleur"
+    //% block="ask the next color"
+    //% block.loc.nl="vraag de volgende kleur"
     export function checkNextColor() {
         SimonSays.setNextColor()
     }
 
-    //% block="check the first color"
-    //% block.loc.nl="check de eerste kleur"
+    //% block="ask the first color"
+    //% block.loc.nl="vraag de eerste kleur"
     export function checkFirstColor() {
         SimonSays.clearColor()
         basic.clearScreen()
@@ -86,8 +86,8 @@ namespace SimSays {
         SimonSays.setFirstColor()
     }
 
-    //% block="check all colors"
-    //% block.loc.nl="check alle kleuren"
+    //% block="ask all colors"
+    //% block.loc.nl="vraag alle kleuren"
     export function checkAllColors() {
         SimSays.checkFirstColor()
         while (SimSays.isInSeries()) {
